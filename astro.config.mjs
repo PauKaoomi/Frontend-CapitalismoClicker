@@ -2,10 +2,14 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import mdx from '@astrojs/mdx'
+import astroExpressiveCode from 'astro-expressive-code'
+import react from '@astrojs/react'
 
 // https://astro.build/config
 export default defineConfig({
 	integrations: [
+		react(),
+		astroExpressiveCode(),
 		mdx(),
 		starlight({
 			title: 'My Docs',
